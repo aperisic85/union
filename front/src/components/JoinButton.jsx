@@ -8,7 +8,7 @@ const JoinButton = () => {
       <Link to="/join" className="join-button">
         {" "}
         {/* Koristimo Link komponentu */}
-        Učlani se!
+        Postani član!
       </Link>
     </div>
   );

@@ -8,10 +8,10 @@
 .join-button {
     display: inline-block;
     padding: 15px 25px;
-    background-color: #775588; /* Crvena boja za isticanje */
+    background-color: #ff0000; /* Crvena boja za isticanje */
     color: #fff; /* Bijela boja teksta */
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: bold;
     border-radius: 30px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -19,8 +19,8 @@
 }
 
 .join-button:hover {
-   // background-color: #e60000;   /* Tamnija crvena na hover */
-   background-color: #7755DD;
+    background-color: #e60000; /* Tamnija crvena na hover */
+    //background-color: #7755dd;
 }
 
 @keyframes pulse-animation {
