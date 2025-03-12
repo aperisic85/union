@@ -42,7 +42,6 @@ const NewsSection = () => {
           </div>
         </div>
       ))}
-      <button className="load-more-news">Prikaži još vijesti</button>
     </div>
   );
 };
