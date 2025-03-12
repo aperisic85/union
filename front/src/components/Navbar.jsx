@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import lighthouseLogo from '../assets/lighthouse-logo.svg';
+import './navbar.css';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,8 +13,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container nav-container">
-      <img src={lighthouseLogo} alt="Lighthouse Logo" width="50" height="50" />
-        <Link to="/" className="nav-logo">Sindikat Plovput</Link>
+      <img src={lighthouseLogo} alt="Lighthouse Logo" width="50" height="50" className='nav-logo'/>
+        
+      <p className="nav-title">Sindikat Plovput</p>
+         
         <div className="nav-toggle" onClick={toggleMenu}>&#9776;</div>
         <ul className={`nav-list ${showMenu ? 'show' : ''}`}>
           <li><Link to="/" className="nav-link">Početna</Link></li>
