@@ -1,0 +1,42 @@
+/* Za cijelu stranicu (background) */
+.about-page {
+    background-color: #f0f0f0; /* Svijetlo siva pozadina za cijelu stranicu */
+    min-height: 100vh; /* Osigurava da stranica zauzima cijeli ekran */
+    display: flex;
+    justify-content: center; /* Centriranje horizontalno */
+    align-items: center; /* Centriranje vertikalno */
+}
+
+/* Kontejner za tekst (bijela pozadina, padding) */
+.about-container {
+    max-width: 800px; /* Maksimalna širina teksta */
+    margin: 20px; /* Margine sa strane */
+    padding: 40px; /* Padding unutar containera */
+    background-color: #fff; /* Bijela pozadina */
+    border-radius: 10px; /* Zaobljeni rubovi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lagana sjena */
+    text-align: left; /* Poravnanje teksta na lijevo */
+}
+
+h1 {
+    font-size: 2.5em; /* Veličina naslova */
+    color: #333; /* Boja naslova */
+    margin-bottom: 30px; /* Razmak ispod naslova */
+    text-align: center; /* Centriranje naslova */
+}
+
+p {
+    font-size: 1.1em; /* Veličina teksta */
+    color: #555; /* Boja teksta */
+    line-height: 1.7; /* Visina linije */
+    margin-bottom: 30px; /* Razmak između paragrafa */
+}
+
+a {
+    color: #007bff; /* Boja linkova */
+    text-decoration: none; /* Bez podcrtavanja */
+}
+
+a:hover {
+    text-decoration: underline; /* Podcrtano na hover */
+}
