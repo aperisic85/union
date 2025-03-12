@@ -1,9 +1,3 @@
-.news-item-link {
-    text-decoration: none; /* Ukloni underline sa linka */
-    color: inherit; /* Naslijedi boju teksta od roditelja */
-    display: block; /* Učini link block elementom */
-}
-
 .news-section-container {
     display: flex;
     flex-direction: column;

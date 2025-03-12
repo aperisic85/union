@@ -1,0 +1,83 @@
+.news-detail-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-detail-container .news-header {
+    /* Dodana specifičnost */
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.news-detail-container .news-image {
+    /* Dodana specifičnost */
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.news-detail-container .news-time {
+    /* Dodana specifičnost */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+
+.news-detail-container .news-title {
+    /* Dodana specifičnost */
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: left;
+}
+
+.news-detail-container .news-content {
+    /* Dodana specifičnost */
+    font-size: 1.15em;
+    line-height: 1.7;
+    color: #333;
+}
+
+.news-detail-container .news-content p {
+    /* Dodana specifičnost */
+    margin-bottom: 25px;
+}
+
+.news-detail-container .back-button {
+    /* Dodana specifičnost */
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.news-detail-container .back-button:hover {
+    /* Dodana specifičnost */
+    background-color: #c0392b;
+}
+
+.news-detail-container .loading-container, /* Dodana specifičnost */
+.news-detail-container .error-container {
+    /* Dodana specifičnost */
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+    color: #666;
+}

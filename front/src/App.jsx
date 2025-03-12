@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Join from "./pages/Join";
+import NewsDetail from "./pages/NewsDetail";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/join" element={<Join />}></Route>
+          <Route path="/news/:id" element={<NewsDetail />} />{" "}
+          {/* Ruta za detalje vijesti */}
           {/* Ostale rute */}
         </Routes>
         <Footer />

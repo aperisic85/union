@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Uvoz Link komponente
 import "./NewsSection.css"; // CSS datoteka za stilizaciju
 import slika1 from "../assets/images/slika_1.jpeg";
 import slika2 from "../assets/images/kolektivni.jpg";
@@ -27,20 +28,28 @@ const NewsSection = () => {
   return (
     <div className="news-section-container">
       {newsData.map((newsItem) => (
-        <div className="news-item" key={newsItem.id}>
-          <div className="news-image-container">
-            <img
-              src={newsItem.image}
-              alt={newsItem.title}
-              className="news-image"
-            />
-            <span className="news-time">{newsItem.time}</span>
+        <Link
+          to={`/news/${newsItem.id}`}
+          key={newsItem.id}
+          className="news-item-link"
+        >
+          {" "}
+          {/* Link */}
+          <div className="news-item">
+            <div className="news-image-container">
+              <img
+                src={newsItem.image}
+                alt={newsItem.title}
+                className="news-image"
+              />
+              <span className="news-time">{newsItem.time}</span>
+            </div>
+            <div className="news-details">
+              <h3 className="news-title">{newsItem.title}</h3>
+              <p className="news-description">{newsItem.description}</p>
+            </div>
           </div>
-          <div className="news-details">
-            <h3 className="news-title">{newsItem.title}</h3>
-            <p className="news-description">{newsItem.description}</p>
-          </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

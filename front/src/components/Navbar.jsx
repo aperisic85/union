@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import lighthouseLogo from "../assets/lighthouse-logo.svg";
-import "./navbar.css";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
