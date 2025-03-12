@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./NewsDetail.css";
+import slikaSkupstina from "../assets/images/skupstina_big.png";
 
 const NewsDetail = () => {
   const { id } = useParams();
@@ -18,10 +19,15 @@ const NewsDetail = () => {
             id: 1,
             title: "Skupština sindikata Plovputa",
             content:
-              "Detaljno izvješće sa skupštine... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
-            image: "https://via.placeholder.com/1200x600", // Veća slika
+              "Dana 11 veljače održana je skupština sindikata Plovputa... ",
+            image: slikaSkupstina, // Veća slika
             time: "9 min",
-            fullContent: "Ovo je puni sadržaj vijesti...", // Puni sadržaj
+            fullContent: [
+              "Dana 11 veljače održana je skupština sindikata Plovputa.",
+              "Dnevni red: 1.Izvješće o radu",
+              "2.Izbor tijela sindikata",
+              "3. Razno bla bla bla",
+            ],
           },
           2: {
             id: 2,
