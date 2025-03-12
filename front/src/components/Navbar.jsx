@@ -13,14 +13,15 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container nav-container">
-        <img
-          src={lighthouseLogo}
-          alt="Lighthouse Logo"
-          width="50"
-          height="50"
-          className="nav-logo"
-        />
-
+        <Link to="/" className="nav-logo-link">
+          <img
+            src={lighthouseLogo}
+            alt="Lighthouse Logo"
+            width="50"
+            height="50"
+            className="nav-logo"
+          />
+        </Link>
         <p className="nav-title">Sindikat Plovputa</p>
 
         <div className="nav-toggle" onClick={toggleMenu}>

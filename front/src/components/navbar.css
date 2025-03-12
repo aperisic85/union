@@ -52,6 +52,10 @@
 .nav-link:hover {
     background: red;
 }
+.nav-logo-link {
+    display: inline-block; /* Da omogući stiliziranje */
+    /* Dodatni stilovi ako su potrebni */
+}
 
 .nav-title {
     color: white;
