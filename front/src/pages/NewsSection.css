@@ -1,7 +1,7 @@
 .news-item-link {
-    text-decoration: none; /* Ukloni underline sa linka */
-    color: inherit; /* Naslijedi boju teksta od roditelja */
-    display: block; /* Učini link block elementom */
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .news-section-container {
@@ -72,4 +72,16 @@
 
 .load-more-news:hover {
     background-color: #ddd;
+}
+
+/* Stil za mobitele - da se vidi da je link */
+@media (max-width: 768px) {
+    .news-title {
+        text-decoration: underline;
+        color: #007bff; /* Plava boja linka */
+    }
+
+    .news-description {
+        text-decoration: underline;
+    }
 }
