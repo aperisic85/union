@@ -35,12 +35,12 @@ const Contact = () => {
           <p>
             <strong>Mobitel/WhatsApp:</strong>
             <a
-              href="https://wa.me/385911234567"
+              href="https://wa.me/385989345628"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
             >
-              +385 91 123 4567
+              +385 99 934 5628
               <i className="fab fa-whatsapp whatsapp-icon"></i>
             </a>
           </p>
@@ -67,12 +67,12 @@ const Contact = () => {
           <p>
             <strong>Mobitel/WhatsApp:</strong>
             <a
-              href="https://wa.me/385911234567"
+              href="https://wa.me/385916196334"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
             >
-              +385 91 123 4567
+              +385 91 619 6334
               <i className="fab fa-whatsapp whatsapp-icon"></i>
             </a>
           </p>
