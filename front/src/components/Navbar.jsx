@@ -42,6 +42,11 @@ const Navbar = () => {
               Kontakt
             </Link>
           </li>
+          <li>
+            <Link to="/join" className="nav-link">
+              Pridruži se
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
