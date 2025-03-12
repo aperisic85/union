@@ -26,9 +26,8 @@ const About = () => {
       <p>
         Ako ste zainteresirani za pridruživanje našoj zajednici ili imate
         pitanja, molimo vas da nas{" "}
-        <a href="mailto:kontakt@plovputsindikat.hr">kontaktirate</a>. Spremni
-        smo vam pomoći i podržati vas u svim pitanjima vezanim za rad i
-        Sindikat.
+        <a href="mailto:info@sindikatplovputa.hr">kontaktirate</a>. Spremni smo
+        vam pomoći i podržati vas u svim pitanjima vezanim za rad i Sindikat.
       </p>
     </div>
   );

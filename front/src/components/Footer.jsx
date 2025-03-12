@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        <p>2025. Sindikat zaposlenika Plovput. Sva prava pridržana.</p>
+        <p>2025. Sindikat zaposlenika Plovputa. Sva prava pridržana.</p>
       </div>
     </footer>
   );

@@ -12,7 +12,7 @@ const Contact = () => {
           <strong>Adresa:</strong> Obala Lazareta 1, Split
         </p>
         <p>
-          <strong>Email:</strong> info@sindikatplovput.hr
+          <strong>Email:</strong> info@sindikatplovputa.hr
         </p>
         <p>
           <strong>Telefon:</strong> +385 1 123 4567
