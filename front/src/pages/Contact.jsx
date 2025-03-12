@@ -29,7 +29,7 @@ const Contact = () => {
           <strong>Funkcija:</strong> Povjerenik Sindikata
         </p>
         <p>
-          <strong>Email:</strong> povjerenik@sindikatplovput.hr
+          <strong>Email:</strong> povjerenik@sindikatplovputa.hr
         </p>
       </div>
 
@@ -47,7 +47,7 @@ const Contact = () => {
           <strong>Funkcija:</strong> Zamjenik povjerenika Sindikata
         </p>
         <p>
-          <strong>Email:</strong> zamjenik@sindikatplovput.hr
+          <strong>Email:</strong> zamjenik@sindikatplovputa.hr
         </p>
       </div>
     </div>
