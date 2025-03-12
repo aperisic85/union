@@ -1,0 +1,38 @@
+.join-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.join-button {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #ff0000; /* Crvena boja za isticanje */
+    color: #fff; /* Bijela boja teksta */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    animation: pulse-animation 1.5s infinite;
+}
+
+.join-button:hover {
+    background-color: #e60000; /* Tamnija crvena na hover */
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+        box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0px 6px 12px rgba(255, 0, 0, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.5);
+    }
+}
