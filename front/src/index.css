@@ -1,16 +1,23 @@
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2c3e50;
-  --background-color: #ecf0f1;
-  --text-color: #34495e;
+  --primary-color: #1a5f7a;  /* Tamno plava */
+  --secondary-color: #159895; /* Tirkizna */
+  --accent-color: #ffa41b;  /* Narančasta */
+  --background-color: #f6f6f6; /* Svijetlo siva */
+  --text-color: #333333;
   --card-background: #ffffff;
-  --hover-color: #2980b9;
+  --hover-color: #57c5b6; /* Svijetlo tirkizna */
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh; /* Ovo će osigurati da body ima minimalnu visinu od 100vh */
+  display: flex; /* Postavi flexbox layout */
+  flex-direction: column; /* Stavite elemente u stupac */
 }
 
 body {
@@ -27,7 +34,7 @@ body {
   padding: 0 20px;
 }
 
-/* Navbar Styles 
+/* Navbar Styles */
 .navbar {
   background-color: var(--primary-color);
   padding: 1rem 0;
@@ -36,33 +43,7 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-link {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.nav-link:hover {
-  background-color: var(--hover-color);
-} */
-
-.navbar {
-  background-color: var(--primary-color);
-  padding: 1rem 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-shrink: 0; /* Osiguraj da navbar ne skrči */
 }
 
 .nav-container {
@@ -76,14 +57,12 @@ body {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-left: 1rem;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav-link {
@@ -91,6 +70,7 @@ body {
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 .nav-link:hover {
@@ -116,6 +96,7 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid var(--secondary-color);
 }
 
 .news-card:hover {
@@ -136,7 +117,7 @@ body {
 
 .news-date {
   font-size: 0.9rem;
-  color: #7f8c8d;
+  color: #777;
   padding: 0 1rem;
 }
 
@@ -144,7 +125,7 @@ body {
   display: inline-block;
   margin: 1rem;
   padding: 0.5rem 1rem;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -169,18 +150,18 @@ body {
   width: 100%;
   padding: 0.8rem;
   margin-bottom: 1rem;
-  border: 1px solid #bdc3c7;
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: var(--secondary-color);
 }
 
 .submit-btn {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   color: white;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -191,7 +172,7 @@ body {
 }
 
 .submit-btn:hover {
-  background-color: var(--hover-color);
+  background-color: #e69016;
 }
 
 /* News Detail Styles */
@@ -203,45 +184,78 @@ body {
   line-height: 1.8;
 }
 
+/*FOOTER*/
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 0;
+  margin-top: auto; /* Pomiče footer na dno */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex-basis: 30%;
+  margin-bottom: 1rem;
+}
+
+.social-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #1c3d5c; /* Tamnija verzija primarne boje */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: var(--primary-color);
-    padding: 1rem;
-    display: none;
-  }
-  
-  .nav-list.show {
-    display: block;
-  }
-  
   .nav-container {
     flex-direction: column;
     align-items: flex-start;
   }
-  
-  .nav-logo {
-    margin-bottom: 1rem;
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    display: none;
   }
-  
+
+  .nav-list.show {
+    display: flex;
+  }
+
   .nav-toggle {
     display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
     font-size: 1.5rem;
     color: white;
     cursor: pointer;
+    align-self: flex-end;
   }
-  
+
   .page-content {
     margin-top: 120px;
+  }
+  .footer-section {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+  .social-links ul {
+    justify-content: center;
   }
 }
 

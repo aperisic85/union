@@ -11,15 +11,14 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container nav-container">
-        <Link to="/" className="nav-logo">Novosti</Link>
+        <Link to="/" className="nav-logo">Sindikat Plovput</Link>
+        <div className="nav-toggle" onClick={toggleMenu}>&#9776;</div>
         <ul className={`nav-list ${showMenu ? 'show' : ''}`}>
           <li><Link to="/" className="nav-link">Početna</Link></li>
-          <li><Link to="/add-news" className="nav-link">Dodaj novost</Link></li>
+          <li><Link to="/news" className="nav-link">Novosti</Link></li>
           <li><Link to="/about" className="nav-link">O nama</Link></li>
+          <li><Link to="/contact" className="nav-link">Kontakt</Link></li>
         </ul>
-        <i className="nav-toggle" onClick={toggleMenu}>
-          &#9776;
-        </i>
       </div>
     </nav>
   );

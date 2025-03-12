@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-const NewsDetail = ({ news }) => {
+const NewsDetail = () => {
+  const [newsItem, setNewsItem] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
-  const newsItem = news.find(item => item.id === parseInt(id));
+
+  useEffect(() => {
+    const fetchNewsItem = async () => {
+      try {
+        // Ovdje biste normalno dohvatili podatke s API-ja
+        // Za sada ćemo simulirati dohvat podataka
+        const dummyNews = {
+          id: parseInt(id),
+          title: "Naslov novosti",
+          content: "Sadržaj novosti...",
+          date: new Date().toLocaleDateString()
+        };
+        setNewsItem(dummyNews);
+      } catch (error) {
+        console.error('Error fetching news item:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchNewsItem();
+  }, [id]);
+
+  if (isLoading) {
+    return <div>Učitavanje...</div>;
+  }
 
   if (!newsItem) {
     return <div>Novost nije pronađena</div>;
