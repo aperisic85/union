@@ -6,6 +6,12 @@
   --text-color: #333333;
   --card-background: #ffffff;
   --hover-color: #57c5b6; /* Svijetlo tirkizna */
+  
+  /* Nove boje */
+  --highlight-green: #28a745; /* Zelena za pozitivne akcije */
+  --highlight-red: #dc3545;   /* Crvena za upozorenja */
+  --highlight-yellow: #ffc107; /* Žuta za naglaske */
+  --light-blue: #e3f2fd;      /* Svijetlo plava za pozadine */
 }
 
 * {
@@ -15,9 +21,9 @@
 }
 
 .App {
-  min-height: 100vh; /* Ovo će osigurati da body ima minimalnu visinu od 100vh */
-  display: flex; /* Postavi flexbox layout */
-  flex-direction: column; /* Stavite elemente u stupac */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -43,7 +49,7 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  flex-shrink: 0; /* Osiguraj da navbar ne skrči */
+  flex-shrink: 0;
 }
 
 .nav-container {
@@ -53,10 +59,11 @@ body {
 }
 
 .nav-logo {
-  color: white;
+  color: var(--highlight-yellow);
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .nav-list {
@@ -69,18 +76,22 @@ body {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   border-radius: 4px;
 }
 
 .nav-link:hover {
-  background-color: var(--hover-color);
+  background-color: var(--highlight-green);
+  color: white;
 }
 
 /* Page Content */
 .page-content {
   margin-top: 80px;
   padding: 2rem 0;
+ 
+  background-image: linear-gradient(to bottom, #f7f7f7, #e5e5e5);
+  padding: 2rem;
 }
 
 /* News List Styles */
@@ -96,7 +107,7 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 5px solid var(--secondary-color);
+  border-left: 5px solid var(--highlight-yellow);
 }
 
 .news-card:hover {
@@ -108,16 +119,17 @@ body {
   color: var(--primary-color);
   padding: 1rem;
   font-size: 1.2rem;
+  border-bottom: 2px solid var(--highlight-yellow);
 }
 
 .news-card p {
-  padding: 0 1rem 1rem;
+  padding: 1rem;
   color: var(--text-color);
 }
 
 .news-date {
   font-size: 0.9rem;
-  color: #777;
+  color: var(--secondary-color);
   padding: 0 1rem;
 }
 
@@ -125,7 +137,7 @@ body {
   display: inline-block;
   margin: 1rem;
   padding: 0.5rem 1rem;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -133,12 +145,12 @@ body {
 }
 
 .read-more:hover {
-  background-color: var(--hover-color);
+  background-color: var(--highlight-green);
 }
 
 /* Form Styles */
 .news-form {
-  background-color: var(--card-background);
+  background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -157,11 +169,11 @@ body {
 
 .form-input:focus {
   outline: none;
-  border-color: var(--secondary-color);
+  border-color: #3498db;
 }
 
 .submit-btn {
-  background-color: var(--accent-color);
+  background-color: #3498db;
   color: white;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -172,7 +184,7 @@ body {
 }
 
 .submit-btn:hover {
-  background-color: #e69016;
+  background-color: #2e6da4;
 }
 
 /* News Detail Styles */
@@ -182,6 +194,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   line-height: 1.8;
+  border-top: 5px solid var(--highlight-yellow);
 }
 
 /*FOOTER*/
@@ -189,7 +202,7 @@ body {
   background-color: var(--primary-color);
   color: white;
   padding: 2rem 0;
-  margin-top: auto; /* Pomiče footer na dno */
+  margin-top: auto;
 }
 
 .footer-content {
@@ -210,15 +223,21 @@ body {
 }
 
 .social-links a {
-  color: white;
+  color: var(--highlight-yellow);
   font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
 }
 
 .copyright {
   text-align: center;
   margin-top: 1rem;
   padding: 1rem;
-  background-color: #1c3d5c; /* Tamnija verzija primarne boje */
+  background-color: #1c3d5c;
+  color: var(--highlight-yellow);
 }
 
 /* Responsive Design */
@@ -248,7 +267,9 @@ body {
 
   .page-content {
     margin-top: 120px;
+    flex-grow: 1;
   }
+  
   .footer-section {
     flex-basis: 100%;
     text-align: center;

@@ -5,6 +5,7 @@ import NewsDetail from './pages/NewsDetail';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import About from './pages/About';
+import AddNews from './pages/AddNews';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/news/:id" element={<NewsDetail />} />
           <Route path='/about' element={<About />} />
+          <Route path='/add' element={<AddNews/>}></Route>
           {/* Ostale rute */}
         </Routes>
         <Footer />

@@ -1,0 +1,25 @@
+.about-content {
+    padding: 2rem;
+    font-size: 1.2rem; /* Veći font */
+    line-height: 1.8; /* Bolja razlika između redova */
+  }
+  
+  .about-content h1 {
+    font-size: 2rem; /* Veći naslov */
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p {
+    margin-bottom: 1.5rem; /* Veći razmak između paragrafa */
+  }
+  
+  .about-content a {
+    color: var(--primary-color); /* Boja linkova */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .about-content a:hover {
+    color: var(--secondary-color); /* Boja linkova na hover */
+  }
+  
