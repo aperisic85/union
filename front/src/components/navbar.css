@@ -16,7 +16,6 @@
 .nav-logo {
   width: 50px;
   height: 50px;
-  margin-right: 0.5rem; /* Add some space between logo and text */
 }
 
 /* Style for the text after the logo */
@@ -46,6 +45,8 @@
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
 .nav-link:hover {
@@ -60,12 +61,15 @@
   left: 50%;
   transform: translateX(-50%);
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
   .nav-container {
     flex-wrap: wrap;
   }
   .nav-title {
-    font-size: 1.2rem; /* Slightly smaller font on mobile */
+    position: static;
+    transform: none;
+    margin-left: auto;
+    font-size: 1.2rem;
   }
   .nav-toggle {
     display: block;
@@ -76,14 +80,24 @@
     display: none;
     flex-direction: column;
     width: 100%;
+    align-items: center;
+    text-align: center;
     margin-top: 1rem;
   }
-
   .nav-list.show {
     display: flex;
+    flex-direction: column;
+
+  } 
+  .nav-list.show + .nav-title {
+    opacity: 0;
+    pointer-events: none;
   }
+
 
   .nav-link {
     padding: 0.5rem 0;
+    width: 100%;
+    border-radius: 0; /* Remove rounded corners on mobile */
   }
 }
