@@ -1,31 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="50" height="50">
-  {/* Pozadinski krug */}
+  <!-- Pozadinski krug -->
   <circle cx="100" cy="100" r="95" fill="#1a5f7a" stroke="#159895" stroke-width="5"/>
 
-  {/* Baza svjetionika */}
+  <!-- Baza svjetionika -->
   <rect x="85" y="120" width="30" height="60" fill="#fff" stroke="#333" stroke-width="2"/>
 
-  {/* Toranj svjetionika */}
+  <!-- Toranj svjetionika -->
   <rect x="90" y="70" width="20" height="50" fill="#fff" stroke="#333" stroke-width="2"/>
 
-  {/* Vrh svjetionika */}
+  <!-- Vrh svjetionika -->
   <rect x="85" y="60" width="30" height="10" fill="#ffa41b" stroke="#333" stroke-width="2"/>
 
-  {/* Svjetlo svjetionika */}
+  <!-- Snopovi svjetla -->
+  <defs>
+    <!-- Radijalni gradijent za snopove svjetla -->
+    <radialGradient id="lightGradient" cx="20%" cy="50%" r="80%">
+      <stop offset="0%" style="stop-color:rgba(255,255,0,0.8);stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,0,0);stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Grupa za snopove svjetla -->
   <g>
-    {/* Centralni snop svjetla */}
-    <path d="M100,65 L200,65 L200,55 L100,55 Z" fill="#fff700" opacity="0.7">
-      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite" />
+    <!-- Prvi snop svjetla (gleda prema lijevoj strani) -->
+    <path d="M100,55 L0,0 L0,110 Z" fill="url(#lightGradient)" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
     </path>
 
-    {/* Gornji snop svjetla */}
-    <path d="M100,55 L200,25 L200,55 L100,65 Z" fill="#fff700" opacity="0.5">
-      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2s" repeatCount="indefinite" />
+    <!-- Drugi snop svjetla (gleda prema desnoj strani) -->
+    <path d="M100,55 L200,0 L200,110 Z" fill="url(#lightGradient)" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
     </path>
 
-    {/* Donji snop svjetla */}
-    <path d="M100,65 L200,95 L200,65 L100,75 Z" fill="#fff700" opacity="0.5">
-      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2s" repeatCount="indefinite" />
-    </path>
+    <!-- Animacija rotacije za oba snopa -->
+    <animateTransform attributeName="transform"
+      type="rotate"
+      from="0 100 55"
+      to="360 100 55"
+      dur="8s"
+      repeatCount="indefinite"/>
   </g>
 </svg>
