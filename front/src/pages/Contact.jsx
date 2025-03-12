@@ -1,7 +1,7 @@
 import React from "react";
-import povjerenikSlika from "../assets/povjerenik.jpg"; // Putanja do slike povjerenika
-import zamjenikSlika from "../assets/zamjenik.jpg"; // Putanja do slike zamjenika
-import "./contact.css"; // Stilovi komponente
+import povjerenikSlika from "../assets/povjerenik.jpg";
+import zamjenikSlika from "../assets/zamjenik.jpg";
+import "./Contact.css";
 
 const Contact = () => {
   return (
@@ -20,35 +20,63 @@ const Contact = () => {
       </div>
 
       <div className="commissioner-info">
-        <h2>Povjerenik</h2>
         <img src={povjerenikSlika} alt="Povjerenik" className="contact-image" />
-        <p>
-          <strong>Ime:</strong> Ivan Juričević
-        </p>
-        <p>
-          <strong>Funkcija:</strong> Povjerenik Sindikata
-        </p>
-        <p>
-          <strong>Email:</strong> povjerenik@sindikatplovputa.hr
-        </p>
+        <div className="info-container">
+          <h2>Povjerenik</h2>
+          <p>
+            <strong>Ime:</strong> Ivan Juričević
+          </p>
+          <p>
+            <strong>Funkcija:</strong> Povjerenik Sindikata
+          </p>
+          <p>
+            <strong>Email:</strong> povjerenik@sindikatplovputa.hr
+          </p>
+          <p>
+            <strong>Mobitel/WhatsApp:</strong>
+            <a
+              href="https://wa.me/385911234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              +385 91 123 4567
+              <i className="fab fa-whatsapp whatsapp-icon"></i>
+            </a>
+          </p>
+        </div>
       </div>
 
       <div className="deputy-info">
-        <h2>Zamjenik povjerenika</h2>
         <img
           src={zamjenikSlika}
           alt="Zamjenik povjerenika"
           className="contact-image"
         />
-        <p>
-          <strong>Ime:</strong> Marin Vukušić
-        </p>
-        <p>
-          <strong>Funkcija:</strong> Zamjenik povjerenika Sindikata
-        </p>
-        <p>
-          <strong>Email:</strong> zamjenik@sindikatplovputa.hr
-        </p>
+        <div className="info-container">
+          <h2>Zamjenik povjerenika</h2>
+          <p>
+            <strong>Ime:</strong> Marin Vukušić
+          </p>
+          <p>
+            <strong>Funkcija:</strong> Zamjenik povjerenika Sindikata
+          </p>
+          <p>
+            <strong>Email:</strong> zamjenik@sindikatplovputa.hr
+          </p>
+          <p>
+            <strong>Mobitel/WhatsApp:</strong>
+            <a
+              href="https://wa.me/385911234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              +385 91 123 4567
+              <i className="fab fa-whatsapp whatsapp-icon"></i>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
