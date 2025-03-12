@@ -21,7 +21,7 @@ const Navbar = () => {
           className="nav-logo"
         />
 
-        <p className="nav-title">Sindikat Plovput</p>
+        <p className="nav-title">Sindikat Plovputa</p>
 
         <div className="nav-toggle" onClick={toggleMenu}>
           &#9776;
