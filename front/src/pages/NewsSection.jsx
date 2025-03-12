@@ -8,19 +8,19 @@ const NewsSection = () => {
   const newsData = [
     {
       id: 1,
-      title: "Održana skupština Sindikata Plovputa",
+      title: "Skupština sindikata Plovputa",
       description:
-        "21.02.2025 održana je sjednica o kojima je odlučeno da se nastavi raditi.",
+        "21.02.2025 održana je skuština sindikata na kojoj je odlučeno da se nastavi raditi.",
       image: slika1,
-      time: "9 min",
+      time: "11 min",
     },
     {
       id: 2,
       title: "Kolektivni pregovori",
       description:
-        "10.03.2025.Održan inicjalni sastanak za kolektivno pregovaranje...",
+        "10.03.2025. Održan inicijalni sastanak za kolektivno pregovaranje...",
       image: slika2,
-      time: "9 min",
+      time: "28 min",
     },
   ];
 

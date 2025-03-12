@@ -8,7 +8,6 @@ const Home = ({}) => {
   return (
     <div className="home-container">
       {" "}
-      {/* Promijenjeno ime klase */}
       <h1>Novosti</h1>
       <NewsSection />
       <JoinButton />
