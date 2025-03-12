@@ -1,104 +1,106 @@
 .navbar {
-  background-color: var(--primary-color);
-  padding: 0.5rem;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-logo {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
 /* Style for the text after the logo */
 .nav-text {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0; /* Remove default margin */
+    color: white;
+    font-size: 1.5rem;
+    margin: 0; /* Remove default margin */
 }
 
 .nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .nav-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px; /* Rounded corners */
-  transition: background-color 0.3s; /* Smooth transition */
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 .nav-link:hover {
-  background: red;
+    background: red;
 }
 
 .nav-title {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+    color: white;
+    font-size: 2rem; /* Povećana veličina fonta */
+    font-weight: bold; /* Podebljani tekst */
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Dodana sjena */
+    letter-spacing: 1px; /* Povećan razmak između slova */
 }
-@media (max-width: 768px) { 
-  .nav-container {
-    flex-wrap: wrap;
-  }
-  .nav-title {
-    position: static;
-    transform: none;
-    margin-left: auto;
-    font-size: 1.2rem;
-  }
-  .nav-toggle {
-    display: block;
-    margin-left: auto; /* Push toggle to the right */
-  }
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+    .nav-title {
+        position: static;
+        transform: none;
+        margin-left: auto;
+        font-size: 1.5rem; /* Povećana veličina fonta za mobilne uređaje */
+        font-weight: bold;
+        text-shadow: none; /* Uklonjena sjena za mobilne uređaje */
+    }
+    .nav-toggle {
+        display: block;
+        margin-left: auto; /* Push toggle to the right */
+    }
 
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    margin-top: 1rem;
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .nav-list.show {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-list.show + .nav-title {
+        opacity: 0;
+        pointer-events: none;
+    }
 
-  }
-  .nav-list.show {
-    display: flex;
-    flex-direction: column;
-
-  } 
-  .nav-list.show + .nav-title {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-
-  .nav-link {
-    padding: 0.5rem 0;
-    width: 100%;
-    border-radius: 3px; 
-  }
+    .nav-link {
+        padding: 0.5rem 0;
+        width: 100%;
+        border-radius: 3px;
+    }
 }
