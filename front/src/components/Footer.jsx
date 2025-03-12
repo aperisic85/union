@@ -6,10 +6,6 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-section">
-          <h3>Adresa</h3>
-          <p>Obala Lazareta 1, 21000 Split</p>
-        </div>
-        <div className="footer-section">
           <h3>Kontakt</h3>
           <p>Email: info@sindikatplovputa.hr</p>
           <p>Telefon: +385 1 123 4567</p>
