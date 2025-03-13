@@ -1,29 +1,48 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Uvoz Link komponente
-import "./NewsSection.css"; // CSS datoteka za stilizaciju
-import slika1 from "../assets/images/slika_1.jpeg";
-import slika2 from "../assets/images/kolektivni.jpg";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "./NewsSection.css";
+
+const API_BASE_URL = "http://localhost:3000/"; // Prilagodite prema vašem API URL-u
 
 const NewsSection = () => {
-  // Mock podaci za testiranje
-  const newsData = [
-    {
-      id: 1,
-      title: "Skupština sindikata Plovputa",
-      description:
-        "21.02.2025 održana je skuština sindikata na kojoj je odlučeno da se nastavi raditi.",
-      image: slika1,
-      time: "11 min",
-    },
-    {
-      id: 2,
-      title: "Kolektivni pregovori",
-      description:
-        "10.03.2025. Održan inicijalni sastanak za kolektivno pregovaranje...",
-      image: slika2,
-      time: "28 min",
-    },
-  ];
+  const [newsData, setNewsData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await axios.get(`${API_BASE_URL}/news`);
+        const formattedNews = response.data.map((item) => ({
+          ...item,
+          // Pretpostavka da API vraća createdAt timestamp
+          time: new Date(item.createdAt).toLocaleDateString("hr-HR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+          }),
+          description: item.content.substring(0, 100) + "...", // Skraćeni opis
+        }));
+        setNewsData(formattedNews);
+      } catch (error) {
+        console.error("Error fetching news:", error);
+        setError("Došlo je do greške pri učitavanju vijesti");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
+  if (isLoading) {
+    return <div className="loading-container">Učitavanje vijesti...</div>;
+  }
+
+  if (error) {
+    return <div className="error-container">{error}</div>;
+  }
 
   return (
     <div className="news-section-container">
@@ -33,12 +52,11 @@ const NewsSection = () => {
           key={newsItem.id}
           className="news-item-link"
         >
-          {" "}
-          {/* Link */}
           <div className="news-item">
             <div className="news-image-container">
+              {/* Dodajte realnu sliku iz API-ja ako postoji */}
               <img
-                src={newsItem.image}
+                src={newsItem.image || "default-news-image.jpg"}
                 alt={newsItem.title}
                 className="news-image"
               />
