@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./NewsSection.css";
 import defaultImage from "../assets/images/default_news_image.webp";
-
+import ReactMarkdown from 'react-markdown';
 const API_BASE_URL = "http://localhost:3000/api";
 
 const NewsSection = () => {
@@ -68,7 +68,7 @@ const NewsSection = () => {
               </div>
               <div className="news-details">
                 <h3 className="news-title">{newsItem.title}</h3>
-                <p className="news-description">{newsItem.description}</p>
+                <ReactMarkdown>{newsItem.description}</ReactMarkdown>
               </div>
             </div>
           </Link>

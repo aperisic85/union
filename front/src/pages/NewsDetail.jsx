@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./NewsDetail.css";
 import defaultImage from "../assets/images/default_news_image.webp";
+import ReactMarkdown from 'react-markdown';
 
 const API_BASE_URL = "http://localhost:3000/api";
 
@@ -66,7 +67,7 @@ const NewsDetail = () => {
       <h1 className="news-title">{newsItem.title}</h1>
 
       <div className="news-content">
-        <p>{newsItem.content}</p>
+        <ReactMarkdown>{newsItem.content}</ReactMarkdown>
       </div>
 
       <button onClick={goBack} className="back-button">

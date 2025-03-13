@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
 import './AddNewsForm.css';
 
 const API_BASE_URL = "http://localhost:3000/api";
@@ -9,7 +8,6 @@ const API_BASE_URL = "http://localhost:3000/api";
 const AddNewsForm = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [preview, setPreview] = useState(false);
   const [message, setMessage] = useState('');
   const [isError, setIsError] = useState(false);
   const navigate = useNavigate();
@@ -25,7 +23,7 @@ const AddNewsForm = () => {
       setTitle('');
       setContent('');
       setTimeout(() => {
-        navigate('/');
+        navigate('/');  // Preusmjeri na početnu stranicu nakon 2 sekunde
       }, 2000);
     } catch (error) {
       console.error("Error adding news:", error);
@@ -45,38 +43,12 @@ const AddNewsForm = () => {
           placeholder="Naslov vijesti"
           required
         />
-        <div className="textarea-container">
-          <div className="textarea-wrapper">
-            <textarea
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              placeholder="Sadržaj vijesti (podržava Markdown)"
-              required
-              rows={12}
-            />
-          </div>
-          <div className="formatting-guide">
-            <p>Formatiranje:</p>
-            <ul>
-              <li>**bold**</li>
-              <li>*italic*</li>
-              <li># Naslov</li>
-              <li>- Lista</li>
-              <li>[Link](http://example.com)</li>
-            </ul>
-          </div>
-        </div>
-        <div className="preview-toggle">
-          <button type="button" onClick={() => setPreview(!preview)}>
-            {preview ? 'Uredi' : 'Pregled'}
-          </button>
-        </div>
-        {preview && (
-          <div className="preview">
-            <h3>Pregled:</h3>
-            <ReactMarkdown>{content}</ReactMarkdown>
-          </div>
-        )}
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder="Sadržaj vijesti"
+          required
+        />
         <button type="submit">Dodaj vijest</button>
       </form>
       {message && (
