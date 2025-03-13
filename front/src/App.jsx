@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Join from "./pages/Join";
 import NewsDetail from "./pages/NewsDetail";
+import AddNewsForm from "./pages/AddNewsForm";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/join" element={<Join />}></Route>
           <Route path="/news/:id" element={<NewsDetail />} />{" "}
+          <Route path="/add-news" element={<AddNewsForm />} />
           {/* Ruta za detalje vijesti */}
           {/* Ostale rute */}
         </Routes>
