@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./NewsSection.css";
 
-const API_BASE_URL = "http://localhost:3000/"; // Prilagodite prema vašem API URL-u
+const API_BASE_URL = "http://localhost:3000/api"; // Prilagodite prema vašem API URL-u
 
 const NewsSection = () => {
   const [newsData, setNewsData] = useState([]);
