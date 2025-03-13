@@ -1,0 +1,66 @@
+.add-news-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-news-form h2 {
+    margin-top: 0;
+    color: #1a5f7a;
+    text-align: center;
+  }
+  
+  .add-news-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-news-form input,
+  .add-news-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .add-news-form textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .add-news-form button {
+    background-color: #1a5f7a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-news-form button:hover {
+    background-color: #157a7a;
+  }
+  
+  .success-message,
+  .error-message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
