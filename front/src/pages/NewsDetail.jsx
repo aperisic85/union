@@ -5,7 +5,7 @@ import "./NewsDetail.css";
 import defaultImage from "../assets/images/default_news_image.webp";
 import ReactMarkdown from 'react-markdown';
 
-const API_BASE_URL = "http://localhost:3000/api";
+const API_BASE_URL = "http://ina.plovput.hr:8080/api";
 
 const NewsDetail = () => {
   const { id } = useParams();
