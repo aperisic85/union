@@ -16,6 +16,7 @@
     border-radius: 10px; /* Zaobljeni rubovi */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lagana sjena */
     text-align: left; /* Poravnanje teksta na lijevo */
+    margin-top: 80px; /* Margina iznad containera */
 }
 
 h1 {
